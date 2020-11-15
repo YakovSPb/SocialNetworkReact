@@ -1,0 +1,58 @@
+.app-wrapper {
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-areas:
+  "header header header"
+  "nav content content";
+  grid-template-rows: 250px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.header {
+  position: relative;
+  grid-area: header;
+  background: rgb(19, 175, 164);
+}
+
+.header__title{
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.header__title span{
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.header img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.nav {
+  .grid-area: nav;
+  background-color: blue;
+}
+
+.content {
+  grid-area: content;
+  background-color: red;
+}
+.content img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
