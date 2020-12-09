@@ -1,0 +1,16 @@
+.nav {
+  grid-area: nav;
+  margin-top: 10px;
+  background-color: #545554;
+}
+.item{
+}
+.item a {
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+.item a.activeLink{
+	background: rgb(19, 175, 164);
+}

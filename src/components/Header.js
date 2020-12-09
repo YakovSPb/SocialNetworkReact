@@ -1,13 +1,14 @@
 import React from 'react';
+import s from './eader.module.css';
 
 const Header = () => {
 	return (
-    <header className = "header">
-    	<div class="header__title">
-    	Поселок в подмосковье
-    	<span>социальная сеть</span>
+    <header className = {s.header}>
+    	<div className={s.title}>
+	    	<i class="fa fa-home"></i>
+	    	<span className={s.logoText}>Посёлочек</span>
     	</div>
-       <img src='https://vcube.pro/images/Construction_services/Sections/kottedzhnyy-poselok.png' />
+
     </header>
 		)
 }
