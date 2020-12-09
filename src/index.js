@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import {Provider} from './StoreContext'
+import {Provider} from 'react-redux'
 
 
 let rerenderEntireTree = (state) => {
@@ -13,7 +13,7 @@ let rerenderEntireTree = (state) => {
 		<React.StrictMode>
 		<BrowserRouter>
 			<Provider store={store}>
-			<App />
+				<App />
 			</Provider>
 		</BrowserRouter>
 		</React.StrictMode>,  document.getElementById('root')
