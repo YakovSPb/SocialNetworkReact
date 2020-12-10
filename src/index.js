@@ -14,7 +14,7 @@ import {Provider} from 'react-redux'
 				<App />
 			</Provider>
 		</BrowserRouter>
-		,  document.getElementById('root'));
+		,document.getElementById('root'));
 
 
 
