@@ -7,6 +7,11 @@
   background: rgb(19, 175, 164);
 }
 
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
   .logo svg{
     margin-left: 10px;
@@ -27,4 +32,10 @@
   font-size: 16px;
   color: #fff;
   text-align: center;
+}
+
+
+.loginBlock a{
+  color: #fff;
+  text-decoration: none;
 }

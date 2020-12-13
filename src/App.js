@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer.js'
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import ProfileContainer from './components/Profile/ProfileContainer';
@@ -15,7 +15,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 const App = (props) => {
   return (
     <div className="inner">
-      <Header />
+      <HeaderContainer />
     <div className='app-wrapper'>
       <Navbar />
       <Sidebar />
