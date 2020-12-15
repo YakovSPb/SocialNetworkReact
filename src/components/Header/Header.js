@@ -3,7 +3,7 @@ import s from './Header.module.css';
 import{NavLink} from 'react-router-dom';
 
 const Header = (props) => {
-	return (
+    return (
     <header className = {s.header}>
     	<div className="container">
         <div className={s.inner}>
