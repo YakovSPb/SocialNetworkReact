@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from '../../common/Preloader/Preloader'
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -8,14 +9,15 @@ const ProfileInfo = (props) => {
   }
 	return (
     <div>
+    {/*
     <div className={s.img}>
       <img src='https://vcube.pro/images/Construction_services/Sections/kottedzhnyy-poselok.png' />
-    </div>
+    </div>*/}
 
     <div className={s.descriptionBlock}>
       <img src={props.profile.photos.large}/>
-      <div>{props.profile.aboutMe}</div>
-      <div>{props.profile.fullName}</div>
+      <ProfileStatus status={"Hello my friends"}/>
+    <div>{props.profile.fullName}</div>
 
     </div>
 
