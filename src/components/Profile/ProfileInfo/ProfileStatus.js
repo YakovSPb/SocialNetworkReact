@@ -28,7 +28,6 @@ onStatusChange = (e) => {
 
 componentDidUpdate() {
 
-  console.log('componentDidUpdate')
 }
 
 
