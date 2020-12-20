@@ -33,7 +33,6 @@ componentDidUpdate() {
 
 
 render() {
-     console.log('render')
   return (
     <div>
 
