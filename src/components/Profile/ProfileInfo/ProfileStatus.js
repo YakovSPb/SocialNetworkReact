@@ -26,8 +26,16 @@ onStatusChange = (e) => {
   })
 }
 
-componentDidUpdate() {
+componentDidUpdate(prevProps, prevState) {
+  if (prevProps.status !== this.props.status) {
+  this.setState({
+    status: this.props.status
+  });
+  }
 
+
+ let a = this.state;
+ let b = this.props;
 }
 
 
