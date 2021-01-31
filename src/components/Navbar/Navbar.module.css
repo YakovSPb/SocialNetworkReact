@@ -1,6 +1,6 @@
 .nav {
   grid-area: nav;
-  margin-top: 10px;
+  margin: 10px 20px 0 0;
   background-color: #545554;
 }
 .item{
