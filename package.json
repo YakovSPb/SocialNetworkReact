@@ -2,7 +2,7 @@
   "name": "my-app2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/YakovSPb/SocialNetworkReact",
+  "homepage": "https://YakovSPb.github.com/SocialNetworkReact",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
