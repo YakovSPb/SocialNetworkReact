@@ -5,7 +5,7 @@ import s from './MyFriends.module.css';
 const MyFriends = (props) => {
 	return (
     <div>
-    	test
+
     </div>
 		)
 }

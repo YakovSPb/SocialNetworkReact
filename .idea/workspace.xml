@@ -7,6 +7,15 @@
     <list default="true" id="df4e0531-07bf-4137-861b-51124dfeba68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/MyFriends/MyFriends.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/MyFriends/MyFriends.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +58,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -191,7 +201,14 @@
       <workItem from="1612117843120" duration="18000" />
       <workItem from="1612176488381" duration="549000" />
       <workItem from="1612192520162" duration="14000" />
-      <workItem from="1612193595224" duration="3354000" />
+      <workItem from="1612193595224" duration="4380000" />
+      <workItem from="1612200483306" duration="7000" />
+      <workItem from="1612205368124" duration="902000" />
+      <workItem from="1612337460030" duration="1039000" />
+      <workItem from="1612359325186" duration="594000" />
+      <workItem from="1612526714953" duration="595000" />
+      <workItem from="1612607527481" duration="594000" />
+      <workItem from="1612690724920" duration="9949000" />
     </task>
     <servers />
   </component>
