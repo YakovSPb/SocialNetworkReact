@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df4e0531-07bf-4137-861b-51124dfeba68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/MyFriends/MyFriends.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/MyFriends/MyFriends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -208,7 +207,22 @@
       <workItem from="1612359325186" duration="594000" />
       <workItem from="1612526714953" duration="595000" />
       <workItem from="1612607527481" duration="594000" />
-      <workItem from="1612690724920" duration="9949000" />
+      <workItem from="1612690724920" duration="10138000" />
+      <workItem from="1612793358339" duration="2000" />
+      <workItem from="1612872985218" duration="595000" />
+      <workItem from="1612948613066" duration="140000" />
+      <workItem from="1612969297734" duration="1410000" />
+      <workItem from="1613122018595" duration="71000" />
+      <workItem from="1613129546406" duration="7000" />
+      <workItem from="1613298255997" duration="15103000" />
+      <workItem from="1613318160234" duration="1901000" />
+      <workItem from="1613321485117" duration="602000" />
+      <workItem from="1613336119081" duration="3000" />
+      <workItem from="1613337958848" duration="2341000" />
+      <workItem from="1613380375796" duration="2000" />
+      <workItem from="1613383921842" duration="601000" />
+      <workItem from="1613555482186" duration="595000" />
+      <workItem from="1613646312724" duration="898000" />
     </task>
     <servers />
   </component>
@@ -248,6 +262,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/hoc/withSuspense.js</url>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileDataForm.js</url>
+          <line>32</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
