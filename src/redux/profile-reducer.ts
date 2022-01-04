@@ -68,13 +68,13 @@ export const actions = {
 
 
 export const getUserProfile = (userId: number): ThunkType => async (dispatch) => {
-    let data = await profileAPI.getProfile(userId);
+    const data = await profileAPI.getProfile(userId);
     dispatch(actions.setUserProfile(data));
 }
 
 export const updateStatus = (status: string):ThunkType => async (dispatch) => {
     try {
-        let data = await profileAPI.updateStatus(status);
+        const data = await profileAPI.updateStatus(status);
 
         if (data.resultCode === 0) {
             dispatch(actions.setStatus(status))
@@ -85,14 +85,14 @@ export const updateStatus = (status: string):ThunkType => async (dispatch) => {
 }
 
 export const savePhoto = (file: File):ThunkType => async (dispatch) => {
-    let data = await profileAPI.savePhoto(file);
+    const data = await profileAPI.savePhoto(file);
     if (data.resultCode === 0) {
        dispatch(actions.savePhotoSuccess(data.data.photos))
     }
 }
 
 export const getStatus = (userId:number):ThunkType => async (dispatch) => {
-    let response = await profileAPI.getStatus(userId);
+    const response = await profileAPI.getStatus(userId);
     dispatch(actions.setStatus(response.data));
 }
 
@@ -121,7 +121,5 @@ export const saveProfile = (profile: ProfileType):ThunkType => async (dispatch, 
 export type InitialStateType = typeof initialState;
 type ActionsType = InferActionsTypes<typeof actions>
 type ThunkType = BaseThunkType<ActionsType | FormAction>
-
-
 
 export default profileReducer;

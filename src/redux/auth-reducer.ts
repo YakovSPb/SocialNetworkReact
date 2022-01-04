@@ -3,8 +3,6 @@ import {stopSubmit} from "redux-form";
 import {authAPI} from "../api/auth-api";
 import {securityAPI} from "../api/security-api";
 import {BaseThunkType, InferActionsTypes} from "./redux-store";
-import {Action} from "redux";
-
 
 let initialState = {
     userId: null as number | null,
@@ -36,9 +34,7 @@ export const actions = {
     } as const)
 }
 
-
-
-export const getAuthUserData = () => async (dispatch: any) => {
+export const getAuthUserData = (): ThunkType => async (dispatch) => {
     let meData = await authAPI.me();
 
     if (meData.resultCode === ResultCodesEnum.Success ) {
@@ -60,13 +56,11 @@ export const login = (email: string, password: string, rememberMe: boolean, capt
     }
 }
 
-
 export const getCaptchaUrl = ():ThunkType => async (dispatch) => {
     const data = await securityAPI.getCaptchaUrl();
     const captchaURl = data.url;
     dispatch(actions.getCaptchaUrlSuccess(captchaURl));
 }
-
 
 export const logout = ():ThunkType => async (dispatch) => {
     let response = await authAPI.logout();
