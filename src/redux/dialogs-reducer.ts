@@ -27,7 +27,7 @@ let initialState = {
 }
 
 
-const dialogsReducer = (state = initialState, action: ActionsType): initialStateType => {
+const dialogsReducer = (state = initialState, action: ActionsType): InitialStateType => {
 
 	switch (action.type) {
 		case 'SN/DIALOGS/SEND-MESSAGE':
@@ -50,5 +50,5 @@ export const actions = {
 
 export default dialogsReducer;
 
-export type initialStateType = typeof initialState
+export type InitialStateType = typeof initialState
 type ActionsType = InferActionsTypes<typeof actions>

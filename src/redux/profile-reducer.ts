@@ -11,6 +11,7 @@ type ProfileType = {
     fullName: string
     contacts: ContactsType
     photos: PhotosType
+    aboutMe: string
 }
 let initialState = {
     posts: [
@@ -19,7 +20,6 @@ let initialState = {
     ] as Array<PostType>,
     profile: null as any,
     status: '',
-    newPostText: ''
 };
 
 
@@ -34,7 +34,6 @@ const profileReducer = (state = initialState, action: ActionsType):InitialStateT
             return {
                 ...state,
                 posts: [...state.posts, newPost],
-                newPostText: ''
             }
         }
         case "SN/PROFILE/SET_STATUS": {
