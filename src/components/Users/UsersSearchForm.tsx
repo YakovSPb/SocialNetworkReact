@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { FilterType } from '../../redux/users-reducer';
+import { getUsersFilter } from '../../redux/users-selectors';
 
 const usersSearchFormValidate = (values: any) => {
     const errors = {};
@@ -18,6 +20,8 @@ type PropsType = {
 
 export const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
 
+    const filter = useSelector(getUsersFilter)
+
     const submit = (values: any, { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }) => {
         const filter: FilterType = {
             term: values.term,
@@ -31,7 +35,8 @@ export const UsersSearchForm: React.FC<PropsType> = React.memo((props) => {
     return (
         <div>
             <Formik
-                initialValues={{ term: '', friend: 'null' }}
+                enableReinitialize
+                initialValues={{ term: filter.term, friend: String(filter.friend) }}
                 validate={usersSearchFormValidate}
                 onSubmit={submit}
 
