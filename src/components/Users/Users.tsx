@@ -3,16 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import * as queryString from 'querystring';
 
-import { FilterType, requestUsers } from '../../redux/users-reducer';
+import { FilterType, follow, requestUsers, unfollow } from '../../redux/users-reducer';
 import { getCurrentPage, getFollowingInProgress, getPageSize, getTotalUsersCount, getUsers, getUsersFilter } from '../../redux/users-selectors';
 import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
 import { UsersSearchForm } from './UsersSearchForm';
 
-
 type PropsType = {}
 
-type QueryParamsType = {term?: string; page?: string; friend?: string}
+type QueryParamsType = { term?: string; page?: string; friend?: string }
 
 export const Users: React.FC<PropsType> = (props) => {
 
@@ -32,29 +31,29 @@ export const Users: React.FC<PropsType> = (props) => {
         let actualPage = currentPage;
         let actualFilter = filter;
 
-        if(!!parsed.page) actualPage = Number(parsed.page)
-        if(!!parsed.term) actualFilter = {...actualFilter, term: parsed.term as string}
+        if (!!parsed.page) actualPage = Number(parsed.page)
+        if (!!parsed.term) actualFilter = { ...actualFilter, term: parsed.term as string }
 
-        switch(parsed.friend) {
+        switch (parsed.friend) {
             case "null":
-                actualFilter = {...actualFilter, friend: null}
+                actualFilter = { ...actualFilter, friend: null }
                 break;
             case "true":
-                    actualFilter = {...actualFilter, friend: true}
-                    break;
+                actualFilter = { ...actualFilter, friend: true }
+                break;
             case "false":
-                    actualFilter = {...actualFilter, friend: false}
-                    break;
+                actualFilter = { ...actualFilter, friend: false }
+                break;
         }
 
         dispatch(requestUsers(actualPage, pageSize, actualFilter));
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         const query: QueryParamsType = {}
-        if(!!filter.term) query.term = filter.term
-        if(!!filter.friend !== null) query.friend = String(filter.friend)
-        if(currentPage !== 1) query.page = String(currentPage)
+        if (!!filter.term) query.term = filter.term
+        if (!!filter.friend !== null) query.friend = String(filter.friend)
+        if (currentPage !== 1) query.page = String(currentPage)
 
         history.push({
             pathname: "/developers",
@@ -70,11 +69,11 @@ export const Users: React.FC<PropsType> = (props) => {
         dispatch(requestUsers(1, pageSize, filter));
     }
 
-    const follow = (userId: number) => {
+    const onClickFollow = (userId: number) => {
         dispatch(follow(userId))
     }
 
-    const unfollow = (userId: number) => {
+    const onClickUnfollow = (userId: number) => {
         dispatch(unfollow(userId))
     }
 
@@ -87,8 +86,8 @@ export const Users: React.FC<PropsType> = (props) => {
                 users.map(u => <User user={u}
                     followingInProgress={followingInProgress}
                     key={u.id}
-                    unfollow={unfollow}
-                    follow={follow}
+                    unfollow={onClickUnfollow}
+                    follow={onClickFollow}
                 />
                 )
             }

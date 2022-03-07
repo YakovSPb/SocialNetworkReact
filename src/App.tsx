@@ -8,13 +8,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {
-  BrowserRouter,
-  Route,
-  withRouter,
-  Switch,
-  Redirect,
-  NavLink,
-  Link,
+  BrowserRouter, Route, withRouter, Switch, Link,
 } from "react-router-dom";
 import { LoginPage } from "./components/Login/Login";
 import { compose } from "redux";
@@ -24,8 +18,6 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store, { AppStateType } from "./redux/redux-store";
 import { withSuspense } from "./hoc/withSuspense";
 import { UsersPage } from "./components/Users/UsersContainer";
-import { Avatar, Button, Col, Row } from "antd";
-
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import { Header } from "./components/Header/Header";
@@ -33,13 +25,9 @@ import { Header } from "./components/Header/Header";
 const { SubMenu } = Menu;
 const { Content, Footer, Sider } = Layout;
 
-
-const DialogsContainer = React.lazy(
-  () => import("./components/Dialogs/DialogsContainer")
-);
-const ProfileContainer = React.lazy(
-  () => import("./components/Profile/ProfileContainer")
-);
+const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
+const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
+const ChatPage = React.lazy(() => import('./pages/Chat/ChatPage'))
 
 type MapPropsType = ReturnType<typeof mapStateToProps>;
 type DispatchPropsType = {
@@ -48,6 +36,7 @@ type DispatchPropsType = {
 
 const SuspendedDialogs = withSuspense(DialogsContainer);
 const SuspendedProfile = withSuspense(ProfileContainer);
+const SuspendedChatPage = withSuspense(ChatPage);
 
 class App extends React.Component<DispatchPropsType & MapPropsType> {
   catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
@@ -101,7 +90,7 @@ class App extends React.Component<DispatchPropsType & MapPropsType> {
                   <Menu.Item key="8">option8</Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
-                  <Menu.Item key="9">option9</Menu.Item>
+                  <Menu.Item key="9"><Link to='/chat'>Chat</Link></Menu.Item>
                   <Menu.Item key="10">option10</Menu.Item>
                   <Menu.Item key="11">option11</Menu.Item>
                   <Menu.Item key="12">option12</Menu.Item>
@@ -127,6 +116,7 @@ class App extends React.Component<DispatchPropsType & MapPropsType> {
                 <Route path="/music" component={Music} />
                 <Route path="/settings" component={Settings} />
                 <Route path="/login" render={() => <LoginPage />} />
+                <Route path="/chat" render={() => <SuspendedChatPage />} />
                 <Route path="*" render={() => <div>
                   404 NOT FOUND
                 </div>} />
@@ -139,7 +129,7 @@ class App extends React.Component<DispatchPropsType & MapPropsType> {
       // <div className="inner">
       //   <HeaderContainer />
       //   <div className="app-wrapper">
-          // <Navbar />
+      // <Navbar />
       //     <Sidebar />
       //     <div className="app-wrapper-content">
       //       <Switch>
